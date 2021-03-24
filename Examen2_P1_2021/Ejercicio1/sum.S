@@ -44,6 +44,7 @@ main:
     mov eax, 1
     mov ebx, edi
     int 0x80
+    
     ;imprime salto de linea
     mov eax, 11
     mov ebx, 10
