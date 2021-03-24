@@ -59,7 +59,7 @@ sum:
 
     for_sum:
         ;for (int i = 0; i < size; i++)
-        cmp edi, dword[esp+4]
+        cmp edx, dword[esp+4]
         jge end_for
 
         
