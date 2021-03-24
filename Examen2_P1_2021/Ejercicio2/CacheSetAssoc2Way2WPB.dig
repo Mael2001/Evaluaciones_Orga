@@ -197,11 +197,15 @@ endmodule</string>
           <int>32</int>
         </entry>
       </elementAttributes>
-      <pos x="1240" y="500"/>
+      <pos x="1260" y="520"/>
     </visualElement>
     <visualElement>
       <elementName>Multiplexer</elementName>
       <elementAttributes>
+        <entry>
+          <string>Selector Bits</string>
+          <int>2</int>
+        </entry>
         <entry>
           <string>Bits</string>
           <int>32</int>
@@ -255,7 +259,7 @@ endmodule</string>
           <string>data1</string>
         </entry>
       </elementAttributes>
-      <pos x="1160" y="520"/>
+      <pos x="1160" y="500"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -429,7 +433,7 @@ endmodule</string>
           <string>hit0</string>
         </entry>
       </elementAttributes>
-      <pos x="1080" y="560"/>
+      <pos x="1080" y="600"/>
     </visualElement>
     <visualElement>
       <elementName>Tunnel</elementName>
@@ -443,12 +447,35 @@ endmodule</string>
           <string>hit1</string>
         </entry>
       </elementAttributes>
-      <pos x="1080" y="580"/>
+      <pos x="1080" y="620"/>
     </visualElement>
     <visualElement>
-      <elementName>PriorityEncoder</elementName>
-      <elementAttributes/>
-      <pos x="1100" y="560"/>
+      <elementName>Splitter</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Input Splitting</string>
+          <string>1,1</string>
+        </entry>
+        <entry>
+          <string>Output Splitting</string>
+          <string>2</string>
+        </entry>
+      </elementAttributes>
+      <pos x="1120" y="600"/>
+    </visualElement>
+    <visualElement>
+      <elementName>Const</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Value</string>
+          <long>0</long>
+        </entry>
+        <entry>
+          <string>Bits</string>
+          <int>32</int>
+        </entry>
+      </elementAttributes>
+      <pos x="1140" y="520"/>
     </visualElement>
   </visualElements>
   <wires>
@@ -485,10 +512,6 @@ endmodule</string>
       <p2 x="520" y="580"/>
     </wire>
     <wire>
-      <p1 x="1080" y="580"/>
-      <p2 x="1100" y="580"/>
-    </wire>
-    <wire>
       <p1 x="900" y="420"/>
       <p2 x="960" y="420"/>
     </wire>
@@ -509,6 +532,14 @@ endmodule</string>
       <p2 x="520" y="360"/>
     </wire>
     <wire>
+      <p1 x="1140" y="520"/>
+      <p2 x="1160" y="520"/>
+    </wire>
+    <wire>
+      <p1 x="1220" y="520"/>
+      <p2 x="1260" y="520"/>
+    </wire>
+    <wire>
       <p1 x="1160" y="520"/>
       <p2 x="1180" y="520"/>
     </wire>
@@ -521,16 +552,12 @@ endmodule</string>
       <p2 x="520" y="620"/>
     </wire>
     <wire>
+      <p1 x="1080" y="620"/>
+      <p2 x="1120" y="620"/>
+    </wire>
+    <wire>
       <p1 x="420" y="560"/>
       <p2 x="520" y="560"/>
-    </wire>
-    <wire>
-      <p1 x="1080" y="560"/>
-      <p2 x="1100" y="560"/>
-    </wire>
-    <wire>
-      <p1 x="1180" y="560"/>
-      <p2 x="1200" y="560"/>
     </wire>
     <wire>
       <p1 x="900" y="400"/>
@@ -557,8 +584,8 @@ endmodule</string>
       <p2 x="520" y="340"/>
     </wire>
     <wire>
-      <p1 x="1220" y="500"/>
-      <p2 x="1240" y="500"/>
+      <p1 x="1160" y="500"/>
+      <p2 x="1180" y="500"/>
     </wire>
     <wire>
       <p1 x="660" y="600"/>
@@ -567,6 +594,14 @@ endmodule</string>
     <wire>
       <p1 x="500" y="600"/>
       <p2 x="520" y="600"/>
+    </wire>
+    <wire>
+      <p1 x="1080" y="600"/>
+      <p2 x="1120" y="600"/>
+    </wire>
+    <wire>
+      <p1 x="1140" y="600"/>
+      <p2 x="1200" y="600"/>
     </wire>
     <wire>
       <p1 x="900" y="440"/>
@@ -585,12 +620,20 @@ endmodule</string>
       <p2 x="520" y="380"/>
     </wire>
     <wire>
-      <p1 x="1200" y="520"/>
-      <p2 x="1200" y="560"/>
+      <p1 x="1160" y="540"/>
+      <p2 x="1180" y="540"/>
+    </wire>
+    <wire>
+      <p1 x="1200" y="560"/>
+      <p2 x="1200" y="600"/>
     </wire>
     <wire>
       <p1 x="420" y="320"/>
       <p2 x="420" y="560"/>
+    </wire>
+    <wire>
+      <p1 x="1160" y="520"/>
+      <p2 x="1160" y="540"/>
     </wire>
   </wires>
   <measurementOrdering/>
